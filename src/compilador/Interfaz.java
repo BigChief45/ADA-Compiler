@@ -61,8 +61,8 @@ public class Interfaz extends javax.swing.JFrame {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        abrirArchivo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Jaime Andres\\Documents\\UNITEC\\Compiladores I\\Proyecto\\Compilador\\src\\compilador\\imgs\\folder_32.png")); // NOI18N
-        abrirArchivo.setToolTipText("Abrir Archivo ADA");
+        abrirArchivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/compilador/imgs/folder_32.png"))); // NOI18N
+        abrirArchivo.setToolTipText("Open File");
         abrirArchivo.setContentAreaFilled(false);
         abrirArchivo.setFocusPainted(false);
         abrirArchivo.setMaximumSize(new java.awt.Dimension(42, 42));
@@ -76,7 +76,7 @@ public class Interfaz extends javax.swing.JFrame {
         jToolBar1.add(abrirArchivo);
 
         guardarArchivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/compilador/imgs/save_32.png"))); // NOI18N
-        guardarArchivo.setToolTipText("Guardar");
+        guardarArchivo.setToolTipText("Save/Save As...");
         guardarArchivo.setContentAreaFilled(false);
         guardarArchivo.setFocusPainted(false);
         guardarArchivo.setFocusable(false);
@@ -94,7 +94,7 @@ public class Interfaz extends javax.swing.JFrame {
         jToolBar1.add(jSeparator3);
 
         compilarCodigo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/compilador/imgs/compile.png"))); // NOI18N
-        compilarCodigo.setToolTipText("Compilar");
+        compilarCodigo.setToolTipText("Compile");
         compilarCodigo.setContentAreaFilled(false);
         compilarCodigo.setFocusPainted(false);
         compilarCodigo.setFocusable(false);
@@ -112,7 +112,7 @@ public class Interfaz extends javax.swing.JFrame {
         jToolBar1.add(jSeparator1);
 
         compilarCup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/compilador/imgs/cup_icon.png"))); // NOI18N
-        compilarCup.setToolTipText("Compilar CUP");
+        compilarCup.setToolTipText("Compile JavaCUP File");
         compilarCup.setFocusable(false);
         compilarCup.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         compilarCup.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -124,7 +124,7 @@ public class Interfaz extends javax.swing.JFrame {
         jToolBar1.add(compilarCup);
 
         compilarJFLEX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/compilador/imgs/page_table_32.png"))); // NOI18N
-        compilarJFLEX.setToolTipText("Compilar JFLEX");
+        compilarJFLEX.setToolTipText("Compile JFlex File");
         compilarJFLEX.setFocusable(false);
         compilarJFLEX.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         compilarJFLEX.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -137,7 +137,7 @@ public class Interfaz extends javax.swing.JFrame {
         jToolBar1.add(jSeparator2);
 
         limpiarOutput.setIcon(new javax.swing.ImageIcon(getClass().getResource("/compilador/imgs/window_app_blank_32.png"))); // NOI18N
-        limpiarOutput.setToolTipText("Limpiar Output");
+        limpiarOutput.setToolTipText("Clear Output");
         limpiarOutput.setFocusable(false);
         limpiarOutput.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         limpiarOutput.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -150,7 +150,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         outputArea.setColumns(20);
         outputArea.setEditable(false);
-        outputArea.setFont(new java.awt.Font("Lucida Console", 0, 12));
+        outputArea.setFont(new java.awt.Font("Lucida Console", 0, 12)); // NOI18N
         outputArea.setRows(5);
         outputArea.setMargin(new java.awt.Insets(2, 4, 2, 4));
         jScrollPane2.setViewportView(outputArea);
@@ -185,21 +185,22 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 986, Short.MAX_VALUE)
-                .addContainerGap())
             .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 986, Short.MAX_VALUE)
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(808, Short.MAX_VALUE)
                 .addComponent(lineaLabel)
                 .addGap(48, 48, 48)
                 .addComponent(colLabel)
                 .addGap(53, 53, 53))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 986, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 986, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
