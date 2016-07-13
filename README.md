@@ -4,9 +4,9 @@ This program is the 1st stage of an Ada Compiler written in Java. It implements 
 
 This program uses a very basic GUI where you can type in Ada code and save the file to the file system. Once it is saved, it can be processed for analysis by clicking the "Compile" button.
 
-![GUI](https://raw.githubusercontent.com/BigChief45/ADA-Compiler/master/screenshots/gui.jpeg)
+![GUI](https://raw.githubusercontent.com/BigChief45/ADA-Compiler/master/screenshots/gui.JPG)
 
-**Files must be saved before being compiled**
+**NOTE: Files must be saved before being compiled.**
 
 ## Example Ada Code
 
