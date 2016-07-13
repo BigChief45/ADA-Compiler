@@ -8,6 +8,12 @@ This program uses a very basic GUI where you can type in Ada code and save the f
 
 **NOTE: Files must be saved before being compiled.**
 
+## Running the Program
+
+1. Download the repository as a .zip file.
+2. Extract the files.
+3. Run the `/dist/Compilador.jar` file.
+
 ## Example Ada Code
 
 Below is a basic example code in Ada. More examples can be found in the [Ada Wikipedia page](https://en.wikipedia.org/wiki/Ada_(programming_language)).
